@@ -41,7 +41,11 @@
         </{%- if theme.seo %}h2{% else %}h1{%- endif %}>
 
         <div class="post-meta">
-
+ {% if post.top %}
+            <i class="fa fa-thumb-tack"></i>
+            <font color=7D26CD>置顶</font>
+            <span class="post-meta-divider">|</span>
+          {% endif %}
           {%- set date_diff = date(post.date) != date(post.updated) %}
           {%- set time_diff = time(post.date) != time(post.updated) %}
           {%- set datetime_diff = date_diff or time_diff %}
@@ -150,7 +154,7 @@
               {%- if theme.symbols_count_time.item_text_post %}
                 <span class="post-meta-item-text">{{ __('symbols_count_time.time') }} &asymp;</span>
               {%- endif %}
-              <span>{{ symbolsTime(post, config.symbols_count_time.awl, config.symbols_count_time.wpm, __('symbols_count_time.time_minutes')) }}</span>
+              <span>{{ symbolsTime(post, theme.symbols_count_time.awl, theme.symbols_count_time.wpm, __('symbols_count_time.time_minutes')) }}</span>
             </span>
           {%- endif %}
 
@@ -206,7 +210,11 @@
         {{ post.content }}
       {%- endif %}
     </div>
-
+     <div>
+     {% if not is_index %}
+         {% include 'post-end-link.swig' %}
+     {% endif %}
+    </div>
     {#####################}
     {### END POST BODY ###}
     {#####################}
@@ -249,6 +257,7 @@
         {{ post_nav(post) }}
       </footer>
     {% else %}
+
       <footer class="post-footer">
         <div class="post-eof"></div>
       </footer>

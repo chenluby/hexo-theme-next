@@ -53,14 +53,14 @@ $ git clone https://github.com/theme-next/hexo-theme-next themes/next
 ```yml
 # Easily enable fast Ajax navigation on your website.
 # Dependencies: https://github.com/theme-next/theme-next-pjax
-pjax: true
+pjax: false
 ```
 
 Затем включаем параметр `pjax` и переходим по ссылке «Dependencies» с дальнейшеми инструкциями по установке этого модуля.
 
 ## Обновление
 
-NexT выпускает новые версии каждый месяц. Можно обновить до последней мастер-ветки следующей командой:
+Можно обновить до последней мастер-ветки следующей командой:
 
 ```sh
 $ cd themes/next
@@ -74,9 +74,10 @@ $ git pull
 
 ## Обратная связь
 
-* Посетите [Awesome NexT][awesome-next-url] список.
+* Подписаться на новости через [канал Telegram'а][t-news-url].
 * Вступить в наши [Telegram][t-chat-url] / [Gitter][gitter-url] / [Riot][riot-url] чаты.
 * [Добавить или улучшить перевод][i18n-url] за несколько секунд.
+* Посетите [Awesome NexT][awesome-next-url] список.
 * Сообщить об ошибке в разделе [GitHub Issues][issues-bug-url].
 * Запросить новую возможность на [GitHub][issues-feat-url].
 * Голосовать за [популярные запросы возможностей][feat-req-vote-url].

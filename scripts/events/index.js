@@ -40,13 +40,10 @@ hexo.on('generateAfter', () => {
         } else {
           hexo.log.info('Congratulations! Your are using the latest version of theme NexT.');
         }
-      } catch (err) {
+      } catch (e) {
         hexo.log.error('Failed to detect version info. Error message:');
-        hexo.log.error(err);
+        hexo.log.error(e);
       }
     });
-  }).on('error', err => {
-    hexo.log.error('Failed to detect version info. Error message:');
-    hexo.log.error(err);
   });
 });

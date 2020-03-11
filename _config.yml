@@ -57,7 +57,7 @@ footer:
     # `heart` is recommended with animation in red (#ff0000).
     name: user
     # If you want to animate the icon, set it to true.
-    animated: false
+    animated: true
     # Change the color of icon, using Hex Code.
     color: "#808080"
 
@@ -104,10 +104,10 @@ creative_commons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+#scheme: Muse
 #scheme: Mist
 #scheme: Pisces
-#scheme: Gemini
+scheme: Gemini
 
 # Dark Mode
 darkmode: false
@@ -123,11 +123,11 @@ darkmode: false
 # When running the site in a subdirectory (e.g. yoursite.com/blog), remove the leading slash from link value (/archives -> archives).
 # External url should start with http:// or https://
 menu:
-  home: / || home
+  首页: / || home
   #about: /about/ || user
   #tags: /tags/ || tags
   #categories: /categories/ || th
-  archives: /archives/ || archive
+  归档: /archives/ || archive
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
@@ -170,11 +170,11 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: #/images/avatar.gif
+  url: /images/avatar.jpg
   # If true, the avatar will be dispalyed in circle.
-  rounded: false
+  rounded: true
   # If true, the avatar will be rotated with the cursor.
-  rotated: false
+  rotated: true
 
 # Posts / Categories / Tags in sidebar.
 site_state: true
@@ -260,6 +260,8 @@ symbols_count_time:
   separated_meta: true
   item_text_post: true
   item_text_total: false
+  awl: 4
+  wpm: 275
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
 tag_icon: false
@@ -354,6 +356,9 @@ mobile_layout_economy: false
 # Android Chrome header panel color ($brand-bg / $headband-bg => $black-deep).
 android_chrome_color: "#222"
 
+# Hide sticky headers and color the menu bar on Safari (iOS / macOS).
+safari_rainbow: false
+
 # Custom Logo (Do not support scheme Mist)
 custom_logo: #/uploads/custom-logo.jpg
 
@@ -361,29 +366,29 @@ codeblock:
   # Code Highlight theme
   # Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic
   # See: https://github.com/chriskempson/tomorrow-theme
-  highlight_theme: normal
+  highlight_theme: night bright
   # Add copy button on codeblock
   copy_button:
-    enable: false
+    enable: true
     # Show text copy result.
-    show_result: false
+    show_result: true
     # Available values: default | flat | mac
-    style:
+    style: mac
 
 back2top:
   enable: true
   # Back to top in sidebar.
   sidebar: false
   # Scroll percent label in b2t button.
-  scrollpercent: false
+  scrollpercent: true
 
 # Reading progress bar
 reading_progress:
-  enable: false
+  enable: true
   # Available values: top | bottom
   position: top
-  color: "#37c6c0"
-  height: 3px
+  color: "#222"
+  height: 2px
 
 # Bookmark Support
 bookmark:
@@ -514,9 +519,9 @@ math:
 
   # hexo-renderer-pandoc (or hexo-renderer-kramed) required for full MathJax support.
   mathjax:
-    enable: false
+    enable: true
     # See: https://mhchem.github.io/MathJax-mhchem/
-    mhchem: false
+    mhchem: true
 
   # hexo-renderer-markdown-it-plus (or hexo-renderer-markdown-it with markdown-it-katex plugin) required for full Katex support.
   katex:
@@ -543,7 +548,7 @@ lazyload: false
 
 # Pangu Support
 # For more information: https://github.com/vinta/pangu.js
-pangu: false
+pangu: true
 
 # Quicklink Support
 # For more information: https://github.com/GoogleChromeLabs/quicklink
@@ -702,13 +707,13 @@ cnzz_siteid:
 # AppID and AppKey are recommended to be the same as valine's for counter compatibility.
 # Do not enable both `valine.visitor` and `leancloud_visitors`.
 leancloud_visitors:
-  enable: false
-  app_id: # <app_id>
-  app_key: # <app_key>
+  enable: true
+  app_id: 9ROBvYJkuDARBaYQCIQPb4QB-gzGzoHsz # <app_id>
+  app_key: IYgUA19msKUCdIJqqDOvOeEj # <app_key>
   # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
   # If you don't care about security in leancloud counter and just want to use it directly
   # (without hexo-leancloud-counter-security plugin), set `security` to `false`.
-  security: true
+  security: false
   betterPerformance: false
 
 # Another tool to show number of visitors to each article.
@@ -723,12 +728,12 @@ firestore:
 # Show Views / Visitors of the website / page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi
 busuanzi_count:
-  enable: false
+  enable: true
   total_visitors: true
   total_visitors_icon: user
   total_views: true
   total_views_icon: eye
-  post_views: true
+  post_views: false
   post_views_icon: eye
 
 
@@ -751,7 +756,7 @@ algolia_search:
 # Local Search
 # Dependencies: https://github.com/theme-next/hexo-generator-searchdb
 local_search:
-  enable: false
+  enable: true
   # If auto, trigger search by changing input.
   # If manual, trigger search by pressing enter key or search button.
   trigger: auto
@@ -871,6 +876,17 @@ three:
   canvas_lines: false
   canvas_sphere: false
 
+# Canvas-nest
+# Dependencies: https://github.com/theme-next/theme-next-canvas-nest
+# For more information: https://github.com/hustcc/canvas-nest.js
+canvas_nest:
+  enable: false
+  onmobile: true # Display on mobile or not
+  color: "0,0,255" # RGB values, use `,` to separate
+  opacity: 0.5 # The opacity of line: 0~1
+  zIndex: -1 # z-index property of the background
+  count: 99 # The number of lines
+
 # Canvas-ribbon
 # Dependencies: https://github.com/theme-next/theme-next-canvas-ribbon
 # For more information: https://github.com/zproo/canvas-ribbon
@@ -934,7 +950,7 @@ vendors:
 
   # Lazyload
   # lazyload: //cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js
-  # lazyload: //cdnjs.cloudflare.com/ajax/libs/lozad.js/1.14.0/lozad.min.js
+  # lazyload: //cdnjs.cloudflare.com/ajax/libs/lozad.js/1.9.0/lozad.min.js
   lazyload:
 
   # Pangu
@@ -959,7 +975,7 @@ vendors:
 
   # Gitalk
   # gitalk_js: //cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js
-  # gitalk_css: //cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css
+  # gitalk_css: //cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css
   gitalk_js:
   gitalk_css:
 
@@ -976,7 +992,7 @@ vendors:
 
   # Mermaid
   # mermaid: //cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js
-  # mermaid: //cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.2/mermaid.min.js
+  # mermaid: //cdnjs.cloudflare.com/ajax/libs/mermaid/8.3.0/mermaid.min.js
   mermaid:
 
   # Internal version: 1.2.1
@@ -1006,6 +1022,12 @@ vendors:
   canvas_sphere:
 
   # Internal version: 1.0.0
+  # canvas_nest: //cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1/canvas-nest.min.js
+  # canvas_nest_nomobile: //cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1/canvas-nest-nomobile.min.js
+  canvas_nest:
+  canvas_nest_nomobile:
+
+  # Internal version: 1.0.0
   # canvas_ribbon: //cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js
   canvas_ribbon:
 
@@ -1013,3 +1035,9 @@ vendors:
 css: css
 js: js
 images: images
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000

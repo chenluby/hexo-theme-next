@@ -1,3 +1,7 @@
+    <a href="/">
+      <img class="site-author-image" itemprop="image" alt="{{ author }}"
+        src="{{ url_for(theme.avatar.url or theme.images + '/avatar.jpg') }}">
+    </a>
 <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
   {%- if theme.avatar.url %}
     <img class="site-author-image" itemprop="image" alt="{{ author }}"
@@ -63,7 +67,7 @@
 {%- if theme.chat.enable and theme.chat.service !== '' %}
   <div class="sidebar-button motion-element">
   {%- if theme.chat.service == 'chatra' and theme.chatra.enable %}
-    <a onclick="Chatra('openChat', true);">
+    <a onclick="Chatra('openChat', true)">
   {%- endif %}
   {%- if theme.chat.service == 'tidio' and theme.tidio.enable %}
     <a onclick="tidioChatApi.open();">

@@ -1,3 +1,7 @@
+<script
+  async
+  src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"
+></script>
 {%- if theme.footer.beian.enable %}
   <div class="beian">
     {{- next_url('http://www.beian.miit.gov.cn', theme.footer.beian.icp + ' ') }}
@@ -38,7 +42,7 @@
     {%- if theme.symbols_count_time.item_text_total %}
       <span class="post-meta-item-text">{{ __('symbols_count_time.time_total') }} &asymp;</span>
     {%- endif %}
-    <span title="{{ __('symbols_count_time.time_total') }}">{{ symbolsTimeTotal(site, config.symbols_count_time.awl, config.symbols_count_time.wpm, __('symbols_count_time.time_minutes')) }}</span>
+    <span title="{{ __('symbols_count_time.time_total') }}">{{ symbolsTimeTotal(site, theme.symbols_count_time.awl, theme.symbols_count_time.wpm, __('symbols_count_time.time_minutes')) }}</span>
   {%- endif %}
 </div>
 

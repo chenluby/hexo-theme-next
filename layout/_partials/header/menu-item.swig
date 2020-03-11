@@ -1,7 +1,7 @@
 {% macro render(name, itemName, value) %}
 
   {%- set itemURL = value.split('||')[0] | trim %}
-  {%- if not itemURL.startsWith('http') %}
+  {%- if itemURL.indexOf('http') != 0 %}
     {%- set itemURL = itemURL | replace('//', '/') %}
   {%- endif %}
   <li class="menu-item menu-item-{{ itemName | replace(' ', '-') }}">
