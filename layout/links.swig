@@ -36,8 +36,10 @@
                 float: right;
             }
             .card:hover {
-                transform: scale(1.1);
-                box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);
+                 transform: scale(1.1);
+                 box-shadow: 0 2px 6px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
+                 background-image: linear-gradient(to right,#6a11cb 0,#2575fc 100%);
+
             }
             .card a {
                 border:none;
@@ -83,7 +85,7 @@
                     <div class="card">
                         <img class="ava" src="{{ link.avatar }}"/>
                         <div class="card-header">
-                        <div><a href="{{ link.site }}" target="_blank">@ {{ link.nickname }}</a></div>
+                        <div><a href="{{ link.site }}" target="_blank"> {{ link.nickname }}</a></div>
                         <div class="info">{{ link.info }}</div>
                         </div>
                     </div>
