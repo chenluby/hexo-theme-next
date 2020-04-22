@@ -12,6 +12,7 @@
   {%- endif %}
 
   <article itemscope itemtype="http://schema.org/Article">
+  <a class="post-title-link" href="{{ url_for(post.path) }}" itemprop="url">
     <header class="post-header">
 
       <div class="post-meta">
@@ -28,13 +29,14 @@
           {%- set postText = post.title or post.link %}
           {{ next_url(post.link, postText + postTitleIcon, {class: 'post-title-link post-title-link-external', itemprop: 'url'}) }}
         {% else %}
-          <a class="post-title-link" href="{{ url_for(post.path) }}" itemprop="url">
+          
             <span itemprop="name">{{ post.title or __('post.untitled') }}</span>
-          </a>
+         
         {%- endif %}
       </{%- if theme.seo %}h3{% else %}h2{%- endif %}>
 
     </header>
+     </a>
   </article>
 
 {%- endfor %}
